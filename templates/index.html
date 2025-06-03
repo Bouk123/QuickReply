@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>QuickReply.ai V0.1</title>
+</head>
+<body>
+    
+  
+    
+    <form method="POST">
+        {% if session.get('user') %} 
+        <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+    {% endif %}
+    <h1>QuickReply.ai V0.1</h1>
+        
+        
+        <label>Review:</label><br>
+        <textarea name="review"rows="4" cols="50" required></textarea>
+        <label>Platform:</label>
+        <select name="platform">
+            <option value="Airbnb">Airbnb</option>
+            <option value="Booking">Booking</option>
+            <option value="Google">Google</option>
+            <option value="Tripadvisor">Tripadvisor</option>
+        </select><br><br>
+        <label>Tone:</label>
+        <select name="tone">
+            <option value="professional">Professional</option>
+            <option value="warm">Warm</option>
+            <option value="friendly">Friendly</option>
+            <option value="apologetic">Apologetic</option>
+        </select><br><br>
+        <button type="submit">Generate Your Response</button>
+    </form>
+    {%if ai_reply%}
+    
+    <div class="reply-box"><h2>QuickReply:</h2><p>{{ ai_reply }}</p></div>
+    {%endif%}
+</body>
+</html>

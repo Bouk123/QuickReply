@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Register - QuickReply.ai</title>
+</head>
+<body>
+    <h1>Register for QuickReply.ai</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input class="INPUT" type="text" id="username" name="username" placeholder="username" required><br>
+
+        <label for="password">Password:</label>
+        <input class="INPUT" type="password" id="password" name="password" placeholder="password" required><br>
+
+        <label for="confirm">Confirm Password:</label>
+        <input class="INPUT" type="password" id="confirm" name="confirm" placeholder="confirm password" required><br>
+
+        <label>
+            <input type="checkbox" required> Agree to terms and conditions
+        </label><br>
+        <button type="submit">Register</button><br>
+        <a href="{{ url_for('login') }}">Already have an account? Login NOW!!</a>
+    </form>
+    {% if message %}
+        <div class="error">{{ message }}</div>
+    {% endif %}
+</body>
+</html>

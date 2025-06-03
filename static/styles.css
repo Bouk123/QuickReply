@@ -1,0 +1,217 @@
+body{
+    font-family:'Seoge UI', sans-serif ;
+    background: linear-gradient(135deg,#1e1e2f,#2c3e50);
+    color:#333;
+    padding:30px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color:#74a8db;
+    font-size:28px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+}
+form {
+    background-color: #ffffff;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 18px;
+    border: 1px solid #bfc9d1;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f7fafd;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0d6efd;
+    outline: none;
+    background: #eef6ff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #0d63fd 60%, #74a8db 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px rgba(13, 99, 253, 0.08);
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #084dbf 60%, #4e7cbf 100%);
+}
+
+.error {
+    color: #d32f2f;
+    background: #ffeaea;
+    border: 1px solid #f5c2c7;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 18px 0 0 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+a {
+    color: #0d63fd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #34495e;
+    display: block;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #0d63fd;
+}
+
+textarea,select,button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: background 0.3s;
+
+}
+textarea:focus,
+button:focus,
+select:focus{
+    border-color:#0d6efd;
+    outline: none;
+}
+button{
+    background-color: #0d63fd;
+    color:white;
+    font-weight: bold;
+    margin-top:25px;
+    cursor:pointer;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background-color: #084dbf;
+
+}
+select:hover{
+    cursor: pointer;
+}
+h2{
+    margin-top: 40px;
+    text-align:center;
+    color:#2c3e50;
+}
+.reply-box{
+    background: #f7fafd;
+    border: 1.5px solid #bfc9d1;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+    padding: 24px 20px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.07);
+    font-size: 17px;
+    color: #222;
+}
+.reply-box h2{
+    color: #0d63fd;
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom:1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+.reply-box p{
+    font-size:16px;
+}
+
+/* Logout button styles */
+form.logout {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+form.logout button {
+    background: none;
+    border: none;
+    color: #0d63fd;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+form.logout button:hover {
+    color: #084dbf;
+    text-decoration: underline;
+}
+
+.logout-link {
+    display: inline-block;
+    float: right;
+    margin-bottom: 18px;
+    padding: 8px 22px 8px 18px;
+    background: linear-gradient(90deg, #ff5858 60%, #ffb347 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.10);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    border: none;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.logout-link::before {
+    content: "🚪";
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.logout-link:hover {
+    background: linear-gradient(90deg, #ff4141 60%, #ff9900 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(255, 88, 88, 0.18);
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+}

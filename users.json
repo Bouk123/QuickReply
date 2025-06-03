@@ -1,0 +1,10 @@
+[
+    {
+        "username": "Dionisis",
+        "password": "scrypt:32768:8:1$hbpUFnOUWbNhtxuC$c58a7cc9afc86789077406298c0ef2935631456696176f26bdf3d6d7ac45c1c3870c4f22b435cc88b3d0685ff2d568572b78c4f76f1217c437b20642ba9a5516"
+    },
+    {
+        "username": "dionisis wifey",
+        "password": "scrypt:32768:8:1$9r5VuAGefcl65Ffj$dbc2426ff2c0d7703ef1ac9eced1ca9691648a6705491ab13251d23bef5ed01bdca40834e695398775817933a3d855b702ef0719a2578a25f83de4a7542b91fc"
+    }
+]
