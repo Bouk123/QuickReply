@@ -31,7 +31,7 @@ def index():
         review=request.form.get("review")
         platform=request.form.get("platform")
         tone=request.form.get("tone")
-
+        session['last_review']= review
         prompt = f"""
 You are a professional host responding to a review on {platform}. Here's the review:
 

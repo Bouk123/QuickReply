@@ -37,7 +37,26 @@
     </form>
     {%if ai_reply%}
     
-    <div class="reply-box"><h2>QuickReply:</h2><p>{{ ai_reply }}</p></div>
+    <div class="reply-box"><h2>QuickReply:</h2><br><p>The Review: {{ session.get('last_review') }} </p><p class=" reply" id="ai-reply" data-ai="{{ai_reply}}"></p></div>
     {%endif%}
+    <script>
+    
+    document.addEventListener("DOMContentLoaded",() => {
+        const el = document.getElementById("ai-reply");
+        const text = el.dataset.ai;
+        let i = 0;
+        function typeEffect(){
+            if (i <text.length){
+                el.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 20);
+            }
+        }
+        if (text){
+            el.innerHTML="";
+            typeEffect();
+        }
+    });
+        </script>
 </body>
 </html>
