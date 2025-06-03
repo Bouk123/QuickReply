@@ -32,13 +32,22 @@ def index():
         platform=request.form.get("platform")
         tone=request.form.get("tone")
 
-        prompt =f"""
-        You are a proffesional and polite host on {platform}.
-        Respond to this review in a {tone} tone :
+        prompt = f"""
+You are a professional host responding to a review on {platform}. Here's the review:
 
-        "{review}"
-        Keep it short, polite and empathetic, also detect the languange and answer in that language. keep it short and correct
-        """
+{review}
+
+Write a short and natural reply in the **same language as the review**.
+Keep the tone: {tone}.
+
+Guidelines:
+- If the review is negative, be understanding, professional, and show care.
+- If it's positive, be warm, thankful, and make it feel personal.
+- Do **not** repeat the review text. Write as a human, not a bot.
+- Limit the reply to 2-3 sentences. No generic thank-you lines.
+
+Output: Just the reply. Nothing more.
+"""
         response=openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
